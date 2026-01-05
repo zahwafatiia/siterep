@@ -1,0 +1,401 @@
+/* Pengaturan Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #F9F7F2; 
+    color: #8f6868;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #611313;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('hero-baground.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 60px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #802419;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.container {
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.bg-light {
+    background: #f4f4f4;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    background: #802419;
+    height: 3px;
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 200px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+/* Atur Grid agar kartu sejajar */
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Base Kartu */
+.card {
+    background-color: transparent;
+    width: 250px;
+    height: 400px;
+    perspective: 1000px; /* Efek 3D */
+}
+
+/* Kontainer Putar */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+/* Trigger Putar saat Hover */
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Sisi Depan dan Belakang */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+/* Styling Sisi Depan */
+.card-front img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Styling Sisi Belakang (Sinopsis) */
+.card-back {
+    background-color: #8b2318; /* Warna merah tema kamu */
+    color: white;
+    transform: rotateY(180deg);
+    justify-content: center;
+}
+
+.card-back p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+.btn-mini {
+    background: white;
+    color: #8b2318;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+    
+.grid-layanan {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Jarak antar kotak */
+    padding: 40px 0;
+    flex-wrap: wrap; /* Agar otomatis turun jika layar HP sempit */
+}
+/* Efek saat Kursor Masuk (Hover) */
+.layanan-item:hover {
+    transform: translateY(-15px); /* Kotak naik ke atas */
+    background-color: #bc8f8f;    /* Berubah jadi warna Dusty Rose Pastel */
+    box-shadow: 0 20px 40px rgba(188, 143, 143, 0.2); /* Bayangan lembut */
+}
+
+/* Mengubah Warna Teks Secara Otomatis */
+.layanan-item:hover h3, 
+.layanan-item:hover p {
+    color: #ffffff; /* Teks jadi putih saat background jadi pink */
+}
+
+/* Animasi Ikon */
+.icon-box {
+    font-size: 50px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.layanan-item:hover .icon-box {
+    transform: scale(1.2) rotate(-10deg); /* Ikon membesar dan miring sedikit */
+}
+.layanan-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* Mengatur ukuran gambar di dalam kotak ikon */
+.icon-box img {
+    width: 90px;        /* Sesuaikan besarnya ikon */
+    height: 90px;
+    object-fit: contain; /* Agar gambar tidak gepeng */
+    transition: filter 0.5s ease; /* Untuk efek perubahan warna */
+}
+
+/* Mengatur wadah lingkaran ikon */
+.icon-box {
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    display: flex;         /* Menggunakan flex agar gambar tepat di tengah */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+/* EFEK INTERAKTIF SAAT HOVER */
+.layanan-item:hover .icon-box {
+    background-color: white;
+    transform: scale(1.1) rotate(-10deg);
+}
+/* Container Utama Kontak */
+.kontak-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+
+/* Kartu Kontak (Berfungsi sebagai Link) */
+.kontak-card {
+    background-color: #ffffff;
+    border: 1px solid #9e8972;
+    padding: 40px;
+    width: 280px;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none; /* Menghapus garis bawah link */
+    color: #4A4A4A;      /* Warna teks charcoal */
+    transition: all 0.4s ease;
+    display: block;
+}
+
+.kontak-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.kontak-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #A67B5B; /* Cokelat Pastel */
+}
+
+.kontak-card p {
+    font-size: 0.9rem;
+    color: #8C7A6B;
+}
+
+/* INTERAKSI HOVER */
+.kontak-card:hover {
+    background-color: #F2EBE3; /* Berubah jadi krem lembut */
+    transform: scale(1.05);    /* Membesar sedikit */
+    border-color: #BC8F8F;
+    box-shadow: 0 10px 25px rgba(188, 143, 143, 0.1);
+}
+/* Memberikan jarak atas dan bawah pada setiap section */
+section {
+    padding: 100px 10%; /* Angka 100px memberikan ruang lega di atas/bawah */
+}
+
+/* Berikan warna latar belakang selang-seling agar terlihat batasnya */
+#layanan {
+    background-color: #F9F7F2; /* Krem sangat muda */
+}
+
+#kontak {
+    background-color: #ffffff; /* Putih bersih */
+    /* Berikan garis tepi tipis di bagian atas sebagai pembatas halus */
+    border-top: 1px solid #F2EBE3; 
+}
+.alamat-center {
+    text-align: center;
+    max-width: 800px; /* Supaya teks tidak terlalu melebar ke samping */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.alamat-detail-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.info-blok {
+    flex: 1;
+    min-width: 200px;
+}
+
+.info-blok .label {
+    font-weight: bold;
+    color: #BC8F8F;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.info-blok p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4A4A4A;
+}
+
+.btn-map-minimal {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: transparent;
+    border: 1px solid #BC8F8F;
+    color: #BC8F8F;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.btn-map-minimal:hover {
+    background-color: #BC8F8F;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(188, 143, 143, 0.2);
+}
