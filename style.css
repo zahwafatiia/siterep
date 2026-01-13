@@ -1,3 +1,4 @@
+/* Pengaturan Umum */
 * {
     margin: 0;
     padding: 0;
@@ -150,13 +151,13 @@ footer {
     flex-wrap: wrap;
 }
 
+
 .card {
     background-color: transparent;
     width: 250px;
     height: 400px;
-    perspective: 1000px;
+    perspective: 1000px; 
 }
-
 
 .card-inner {
     position: relative;
@@ -167,6 +168,8 @@ footer {
     transform-style: preserve-3d;
     cursor: pointer;
 }
+
+
 .card:hover .card-inner {
     transform: rotateY(180deg);
 }
@@ -187,14 +190,12 @@ footer {
     padding: 15px;
 }
 
-
 .card-front img {
     width: 100%;
     height: 280px;
     object-fit: cover;
     border-radius: 10px;
 }
-
 
 .card-back {
     background-color: #8b2318;
@@ -222,24 +223,20 @@ footer {
 .grid-layanan {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 30px; 
     padding: 40px 0;
-    flex-wrap: wrap;
-}
-
+    flex-wrap: wrap; 
+    }
 .layanan-item:hover {
     transform: translateY(-15px); 
-    background-color: #bc8f8f;    
+    background-color: #bc8f8f;   
     box-shadow: 0 20px 40px rgba(188, 143, 143, 0.2); 
 }
-
 
 .layanan-item:hover h3, 
 .layanan-item:hover p {
     color: #ffffff; 
 }
-
-
 .icon-box {
     font-size: 50px;
     margin-bottom: 20px;
@@ -247,20 +244,18 @@ footer {
 }
 
 .layanan-item:hover .icon-box {
-    transform: scale(1.2) rotate(-10deg); 
+    transform: scale(1.2) rotate(-10deg);
 }
 .layanan-header {
     text-align: center;
     margin-bottom: 30px;
 }
-
 .icon-box img {
-    width: 90px;        
+    width: 90px;       
     height: 90px;
     object-fit: contain; 
     transition: filter 0.5s ease; 
 }
-
 
 .icon-box {
     width: 150px;
@@ -268,7 +263,7 @@ footer {
     background-color: #ffffff;
     border-radius: 50%;
     margin: 0 auto 25px;
-    display: flex;        
+    display: flex;         
     justify-content: center;
     align-items: center;
     transition: all 0.5s ease;
@@ -279,7 +274,6 @@ footer {
     background-color: white;
     transform: scale(1.1) rotate(-10deg);
 }
-
 .kontak-grid {
     display: flex;
     justify-content: center;
@@ -287,7 +281,6 @@ footer {
     flex-wrap: wrap;
     padding: 30px 0;
 }
-
 
 .kontak-card {
     background-color: #ffffff;
@@ -297,7 +290,7 @@ footer {
     text-align: center;
     border-radius: 20px;
     text-decoration: none;
-    color: #4A4A4A;   
+    color: #4A4A4A;     
     transition: all 0.4s ease;
     display: block;
 }
@@ -311,7 +304,7 @@ footer {
 .kontak-card h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #A67B5B; /* Cokelat Pastel */
+    color: #A67B5B; 
 }
 
 .kontak-card p {
@@ -319,31 +312,28 @@ footer {
     color: #8C7A6B;
 }
 
-
+/* INTERAKSI HOVER */
 .kontak-card:hover {
     background-color: #F2EBE3; 
-    transform: scale(1.05);   
+    transform: scale(1.05);    
     border-color: #BC8F8F;
     box-shadow: 0 10px 25px rgba(188, 143, 143, 0.1);
 }
-
 section {
     padding: 100px 10%; 
 }
 
-
 #layanan {
-    background-color: #F9F7F2;
+    background-color: #F9F7F2; 
 }
 
 #kontak {
-    background-color: #ffffff; 
-   
+    background-color: #ffffff;
     border-top: 1px solid #F2EBE3; 
 }
 .alamat-center {
     text-align: center;
-    max-width: 800px;
+    max-width: 800px; 
     margin: 0 auto;
     padding: 20px;
 }
@@ -394,5 +384,4 @@ section {
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(188, 143, 143, 0.2);
-
 }

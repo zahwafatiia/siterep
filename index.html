@@ -184,9 +184,19 @@ Di sini, kami merayakan hubungan intim antara pembaca dan objek fisik sebuah buk
         <p>&copy; 2025 Pustaka Arkais Fiksi. Azzahwa Al'fatia Syachputri. UAS Pengembangan Web.</p>
     </footer>
 <script>
-        }
-    });
+
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        
+        sprinkle.classList.add('sprinkle');
+        sprinkle.style.left = x + 'px';
+        sprinkle.style.top = y + 'px';
+        
+        const size = Math.random() * 5 + 2;
+        sprinkle.style.width = size + 'px';
+        sprinkle.style.height = size + 'px';
+        
+    ;
 </script>
 </body>
-
 </html>
