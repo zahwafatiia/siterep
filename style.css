@@ -1,4 +1,3 @@
-/* Pengaturan Umum */
 * {
     margin: 0;
     padding: 0;
@@ -143,7 +142,7 @@ footer {
     display: flex;
     align-items: center;
 }
-/* Atur Grid agar kartu sejajar */
+
 .grid {
     display: flex;
     justify-content: center;
@@ -151,15 +150,14 @@ footer {
     flex-wrap: wrap;
 }
 
-/* Base Kartu */
 .card {
     background-color: transparent;
     width: 250px;
     height: 400px;
-    perspective: 1000px; /* Efek 3D */
+    perspective: 1000px;
 }
 
-/* Kontainer Putar */
+
 .card-inner {
     position: relative;
     width: 100%;
@@ -169,13 +167,11 @@ footer {
     transform-style: preserve-3d;
     cursor: pointer;
 }
-
-/* Trigger Putar saat Hover */
 .card:hover .card-inner {
     transform: rotateY(180deg);
 }
 
-/* Sisi Depan dan Belakang */
+
 .card-front, .card-back {
     position: absolute;
     width: 100%;
@@ -191,7 +187,7 @@ footer {
     padding: 15px;
 }
 
-/* Styling Sisi Depan */
+
 .card-front img {
     width: 100%;
     height: 280px;
@@ -199,9 +195,9 @@ footer {
     border-radius: 10px;
 }
 
-/* Styling Sisi Belakang (Sinopsis) */
+
 .card-back {
-    background-color: #8b2318; /* Warna merah tema kamu */
+    background-color: #8b2318;
     color: white;
     transform: rotateY(180deg);
     justify-content: center;
@@ -226,24 +222,24 @@ footer {
 .grid-layanan {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Jarak antar kotak */
+    gap: 30px;
     padding: 40px 0;
-    flex-wrap: wrap; /* Agar otomatis turun jika layar HP sempit */
-}
-/* Efek saat Kursor Masuk (Hover) */
-.layanan-item:hover {
-    transform: translateY(-15px); /* Kotak naik ke atas */
-    background-color: #bc8f8f;    /* Berubah jadi warna Dusty Rose Pastel */
-    box-shadow: 0 20px 40px rgba(188, 143, 143, 0.2); /* Bayangan lembut */
+    flex-wrap: wrap;
 }
 
-/* Mengubah Warna Teks Secara Otomatis */
+.layanan-item:hover {
+    transform: translateY(-15px); 
+    background-color: #bc8f8f;    
+    box-shadow: 0 20px 40px rgba(188, 143, 143, 0.2); 
+}
+
+
 .layanan-item:hover h3, 
 .layanan-item:hover p {
-    color: #ffffff; /* Teks jadi putih saat background jadi pink */
+    color: #ffffff; 
 }
 
-/* Animasi Ikon */
+
 .icon-box {
     font-size: 50px;
     margin-bottom: 20px;
@@ -251,39 +247,39 @@ footer {
 }
 
 .layanan-item:hover .icon-box {
-    transform: scale(1.2) rotate(-10deg); /* Ikon membesar dan miring sedikit */
+    transform: scale(1.2) rotate(-10deg); 
 }
 .layanan-header {
     text-align: center;
     margin-bottom: 30px;
 }
-/* Mengatur ukuran gambar di dalam kotak ikon */
+
 .icon-box img {
-    width: 90px;        /* Sesuaikan besarnya ikon */
+    width: 90px;        
     height: 90px;
-    object-fit: contain; /* Agar gambar tidak gepeng */
-    transition: filter 0.5s ease; /* Untuk efek perubahan warna */
+    object-fit: contain; 
+    transition: filter 0.5s ease; 
 }
 
-/* Mengatur wadah lingkaran ikon */
+
 .icon-box {
     width: 150px;
     height: 150px;
     background-color: #ffffff;
     border-radius: 50%;
     margin: 0 auto 25px;
-    display: flex;         /* Menggunakan flex agar gambar tepat di tengah */
+    display: flex;        
     justify-content: center;
     align-items: center;
     transition: all 0.5s ease;
 }
 
-/* EFEK INTERAKTIF SAAT HOVER */
+
 .layanan-item:hover .icon-box {
     background-color: white;
     transform: scale(1.1) rotate(-10deg);
 }
-/* Container Utama Kontak */
+
 .kontak-grid {
     display: flex;
     justify-content: center;
@@ -292,7 +288,7 @@ footer {
     padding: 30px 0;
 }
 
-/* Kartu Kontak (Berfungsi sebagai Link) */
+
 .kontak-card {
     background-color: #ffffff;
     border: 1px solid #9e8972;
@@ -300,8 +296,8 @@ footer {
     width: 280px;
     text-align: center;
     border-radius: 20px;
-    text-decoration: none; /* Menghapus garis bawah link */
-    color: #4A4A4A;      /* Warna teks charcoal */
+    text-decoration: none;
+    color: #4A4A4A;   
     transition: all 0.4s ease;
     display: block;
 }
@@ -323,31 +319,31 @@ footer {
     color: #8C7A6B;
 }
 
-/* INTERAKSI HOVER */
+
 .kontak-card:hover {
-    background-color: #F2EBE3; /* Berubah jadi krem lembut */
-    transform: scale(1.05);    /* Membesar sedikit */
+    background-color: #F2EBE3; 
+    transform: scale(1.05);   
     border-color: #BC8F8F;
     box-shadow: 0 10px 25px rgba(188, 143, 143, 0.1);
 }
-/* Memberikan jarak atas dan bawah pada setiap section */
+
 section {
-    padding: 100px 10%; /* Angka 100px memberikan ruang lega di atas/bawah */
+    padding: 100px 10%; 
 }
 
-/* Berikan warna latar belakang selang-seling agar terlihat batasnya */
+
 #layanan {
-    background-color: #F9F7F2; /* Krem sangat muda */
+    background-color: #F9F7F2;
 }
 
 #kontak {
-    background-color: #ffffff; /* Putih bersih */
-    /* Berikan garis tepi tipis di bagian atas sebagai pembatas halus */
+    background-color: #ffffff; 
+   
     border-top: 1px solid #F2EBE3; 
 }
 .alamat-center {
     text-align: center;
-    max-width: 800px; /* Supaya teks tidak terlalu melebar ke samping */
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -398,4 +394,5 @@ section {
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(188, 143, 143, 0.2);
+
 }
