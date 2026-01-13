@@ -184,39 +184,9 @@ Di sini, kami merayakan hubungan intim antara pembaca dan objek fisik sebuah buk
         <p>&copy; 2025 Pustaka Arkais Fiksi. Azzahwa Al'fatia Syachputri. UAS Pengembangan Web.</p>
     </footer>
 <script>
-    // Fungsi untuk membuat sprinkle
-    function createSprinkle() {
-        const dustContainer = document.getElementById('magic-dust');
-        const sprinkle = document.createElement('div');
-        
-        // Posisi random di layar
-        const x = Math.random() * window.innerWidth;
-        const y = Math.random() * window.innerHeight;
-        
-        sprinkle.classList.add('sprinkle');
-        sprinkle.style.left = x + 'px';
-        sprinkle.style.top = y + 'px';
-        
-        // Ukuran random agar lebih natural
-        const size = Math.random() * 5 + 2;
-        sprinkle.style.width = size + 'px';
-        sprinkle.style.height = size + 'px';
-        
-        dustContainer.appendChild(sprinkle);
-        
-        // Hapus elemen setelah animasi selesai agar tidak memberatkan browser
-        setTimeout(() => {
-            sprinkle.remove();
-        }, 1000);
-    }
-
-    // Jalankan fungsi saat user melakukan scroll
-    window.addEventListener('scroll', () => {
-        // Membuat 5 partikel setiap kali scroll
-        for (let i = 0; i < 5; i++) {
-            createSprinkle();
         }
     });
 </script>
 </body>
+
 </html>
